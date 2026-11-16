@@ -1,0 +1,59 @@
+#wac-panel {
+  --wac-accent: #7dd3fc;
+  position: fixed;
+  z-index: 2147483647;
+  top: 14px;
+  right: 76px;
+  width: 224px;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: 14px;
+  color: #e8edf5;
+  background: rgba(14, 18, 27, .9);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, .3);
+  backdrop-filter: blur(12px);
+  font: 12px/1.35 Inter, ui-sans-serif, system-ui, sans-serif;
+  user-select: none;
+}
+
+#wac-panel * { box-sizing: border-box; }
+#wac-panel.wac-off { --wac-accent: #94a3b8; opacity: .88; }
+#wac-panel.wac-collapsed .wac-body { display: none; }
+
+.wac-head { display: flex; align-items: center; gap: 8px; }
+.wac-title { flex: 1; font-size: 13px; font-weight: 700; }
+.wac-title small { color: #778397; font-size: 10px; font-weight: 600; }
+.wac-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--wac-accent); box-shadow: 0 0 10px var(--wac-accent); }
+.wac-icon-button { border: 0; padding: 2px 5px; color: #aab4c4; background: transparent; cursor: pointer; font: inherit; }
+.wac-body { margin-top: 10px; }
+.wac-status { display: grid; grid-template-columns: 1fr auto; gap: 4px 8px; color: #aeb8c7; }
+.wac-status output { color: #f4f7fb; font-variant-numeric: tabular-nums; text-align: right; }
+.wac-controls { display: grid; gap: 7px; margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,.09); }
+.wac-footer { margin-top: 9px; color: #778397; font-size: 10px; }
+.wac-action-button { width: 100%; padding: 7px 8px; border: 1px solid rgba(125,211,252,.35); border-radius: 8px; color: #dff6ff; background: rgba(14,165,233,.14); cursor: pointer; font: inherit; font-weight: 650; }
+.wac-action-button:hover { background: rgba(14,165,233,.24); }
+
+#wac-lasso-preview, #wac-rectangle-preview {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483646;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+
+#wac-lasso-preview polyline, #wac-rectangle-preview rect {
+  fill: rgba(14, 165, 233, .14);
+  stroke: #7dd3fc;
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+
+#wac-rectangle-preview circle {
+  fill: #7dd3fc;
+  stroke: #0e121b;
+  stroke-width: 2;
+}

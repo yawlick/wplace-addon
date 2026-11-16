@@ -1,0 +1,9 @@
+{
+  "name": "wplace-addon",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "download:site": "node download-wplace-js.mjs"
+  }
+}

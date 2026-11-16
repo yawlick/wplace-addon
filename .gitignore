@@ -1,0 +1,6 @@
+node_modules/
+# снимок чужого кода сайта — качается npm run download:site
+snapshot/
+snapshot-old/
+# собранные архивы расширения
+*.zip
